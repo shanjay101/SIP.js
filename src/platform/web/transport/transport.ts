@@ -95,7 +95,7 @@ export class Transport implements TransportDefinition {
       this.logger.error(`Invalid WebSocket Server URL "${url}"`);
       throw new Error("Invalid WebSocket Server URL");
     }
-    if (!["wss", "ws", "udp"].includes(parsed.scheme)) {
+    if (!["wss", "ws", "udp","tls"].includes(parsed.scheme)) {
       this.logger.error(`Invalid scheme in WebSocket Server URL "${url}"`);
       throw new Error("Invalid scheme in WebSocket Server URL");
     }
